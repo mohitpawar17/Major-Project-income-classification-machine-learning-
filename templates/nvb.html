@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Poornima Institute of Engineering and Technology</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="{{ url_for('static',filename = 'css/slick-theme.css')  }}"/>
+  <!-- font awesome style -->
+  <link href="{{ url_for('static',filename = 'css/font-awesome.min.css')  }}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static',filename = 'css/responsive.css')  }}" rel="stylesheet" />
+  
+  <link href="{{ url_for('static',filename = 'css/responsive.css')  }}" rel="stylesheet" />
+
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+
+</head>
+
+<body>
+   
+     <nav style="width=100%; height=80%; " class="navbar navbar-dark bg-white">
+         <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-botttom: 0px;">
+             <img src="{{ url_for('static',filename = 'images/logo.jpg')  }}", width="130%"  height="80%" >
+             
+              
+            
+    
+        </a>
+     </nav>
+    </div>   
+    
+
+<div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+            </a>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/aboutus"> About</a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </header>
+ 
+
+
+
+
+    <div class="main-block">
+      <div class="left-part">
+        <h1>Naive Bayes </h1>
+        <p>Naive Bayes is a classification algorithm for binary (two-class) and multi-class classification problems. The technique is easiest to understand when described using binary or categorical input values.
+
+          It is called naive Bayes or idiot Bayes because the calculation of the probabilities for each hypothesis are simplified to make their calculation tractable. Rather than attempting to calculate the values of each attribute value, they are assumed to be conditionally independent given the target value and calculated.</p>
+      </div>
+        <form action="{{ url_for('predict4')}}" method="get">
+         <div class="title">
+          <h2>Enter data here</h2>
+        </div>
+        <div class="info">
+
+          <input class="age" type="number" name="age" min="18" max="100" placeholder="Age">
+          
+          <select name="workclass">
+            <option>Select Work-class</option>
+            <option value="0">Central Government Job</option>
+            <option value="1">Federal Government Job</option>
+            <option value="2">District Government Job</option>
+            <option value="7">State-Government Job</option>
+            <option value="4">Private job</option>
+            <option value="3">Business</option>
+            <option value="5">Self-Employeed-income</option>
+            <option value="6">Self-Employeed-No-income</option>
+          </select>
+
+          <select name="education">
+            <option>Select Education</option>
+            <option value="5">7th-8th</option>
+            <option value="6">10th</option>
+            <option value="1">12th</option>
+            <option value="11">HS-grad</option>
+            <option value="9">Bachellor</option>
+            <option value="12">Masters</option>
+            <option value="15">Some-college</option>
+            <option value="14">Professor-School</option>
+            <option value="7">Assoc.- ACDM</option>
+            <option value="8">Assoc-VOC</option>
+            <option value="10">Doctorate</option>
+          </select>
+
+          <select name="marital_status">
+            <option>Select Marital-status</option>
+            <option value="1">Married-AF-Spouse</option>
+            <option value="2">Married-CIV-Spouse</option>
+            <option value="3">Married-Spouse-Absent</option>
+            <option value="0">Divorced</option>
+            <option value="5">Separated</option>
+            <option value="4">Never Married</option>
+          </select>
+
+          <select name="occupation">
+            <option>Select Occupation</option>
+            <option value="1">Adm-Clerical</option>
+            <option value="4">Exec-managerial</option>
+            <option value="6">Handlers-Cleaners</option>
+            <option value="10">Prof.-Specially</option>
+            <option value="12">Sales</option>
+            <option value="3">Craft-repair</option>
+            <option value="14">Transport-moving</option>
+            <option value="5">Farming-Fishing</option>
+            <option value="7">Machine-opt-inpection</option>
+            <option value="13">Tech-support</option>
+            <option value="11">Protective-Services</option>
+            <option value="8">Other-Services</option>
+          </select>
+
+          <select name="relationship">
+            <option>Select Relationship</option>
+            <option value="0">Husband</option>
+            <option value="5">Wife</option>
+            <option value="3">Own-Child</option>
+            <option value="4">Unamrried</option>
+            <option value="2">Other-relative</option>
+            <option value="1">Not-in-family</option>
+          </select>
+
+
+
+           <select name="race">
+            <option>Select Race</option>
+            <option value="4">White</option>
+            <option value="2">Black</option>
+            <option value="3">Brown</option>
+            <option value="1">Asian-Prac-Islander</option>
+            <option value="0">Indian-Eskimo</option>
+           </select>
+
+           <select name="sex">
+            <option>Select Sex</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+           </select>
+
+           <input  type="number" name="hours_per_week" min="10" max="50" placeholder="Working hours/Week">
+
+        </div>
+        
+      <button type="submit" href="predict.html">Submit</button>
+      </form>
+    </div>
+
+
+    <br><br><br><br><br>
+
+
+
+
+
+
+</div>      
+      <div class="col-md-12">
+        <center><h3 class="section-title" style="text-align: center;">Sponsored by</h3></center>
+      </div>
+    
+    
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12 col-md-4">
+          <div class="card mb-3">
+      
+              <div class="card">
+                  <img style="max-height: 200px;" src="{{ url_for('static', filename = 'images/Aicte.png')  }}"
+                      class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align:center">IDEA LAB</h5>
+                      
+                  </div>
+      
+      
+              </div>
+          </div>
+      </div>
+      
+      <div class="col-xs-12 col-md-4">
+          <div class="card mb-3">
+      
+              <div class="card">
+                  <img style="max-height: 200px;" src="{{ url_for('static', filename = 'images/nbanew.png')  }}"
+                      class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align:center">NBA</h5>
+                      
+                  </div>
+      
+      
+              </div>
+          </div>
+      </div>
+      
+      <div class="col-xs-10 col-md-4">
+          <div class="card mb-3">
+
+              <div class="card">
+                  <img style="max-height: 200px;" src="{{ url_for('static',filename = 'images/aicte-logo.png')  }}" 
+                      class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title"; style="text-align:center">AICTE MODROB DEEP LEARNING LAB</h5>
+                      
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+    </div>
+</div>
+
+
+      <div class="bottom_bg">
+
+        <!-- info section -->
+        <section class="info_section ">
+          <div class="container">
+            <div class="info_box ">
+              <div class="info_contact">
+                <a href="https://www.google.com/maps/place/Poornima+Institute+of+Engineering+and+Technology/@26.7677794,75.8481925,17z/data=!3m1!4b1!4m5!3m4!1s0x396dc91e898380fd:0xeee859ae1f1b64b0!8m2!3d26.7677794!4d75.8503812">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    Location
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    +01 1234567890
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope"></i>
+                  <span>
+                    poornima@gmail.com
+                  </span>
+                </a>
+              </div>
+              <div class="social_box">
+                <a href="https://www.facebook.com/PoornimaInstitute/">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/PIET_Jaipur?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGcToVIt0ueFAAAAYKiQf2QwMOorWDmqvhC9rxQJZXUREcn-QeOntYmp8zBpiqrQVhv1Q8Q7BUkbc-uZxUw4fmJOXyuy-OkP6tED_dP7wzPpb1RK3bMsHtu0qES3ocqkKioJPM=&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fschool%2Fpoornima-college-of-engineering-jaipur%2F">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end info_section -->
+    </div>
+
+
+    <br>
+    <div class="fixed-bottom ">
+        <div class="bg-white " style="min-height: 40px;">
+
+            <marquee style="color:purple; margin-top: 7px;">
+                <h9>Developed by Mohit Pawar, Student, Department of Computer Engineering, PIET</h9>
+            </marquee>
+        </div>
+    </div>
+    
+
+
+    </div>
+</div>
+    
+<!-- jQery -->
+<script src=src="{{ url_for('static',filename = 'js/jquery-3.4.1.min.js')  }}"></script>
+<!-- bootstrap js -->
+<script src="{{ url_for('static',filename = 'js/bootstrap.js')  }}"></script>
+<!-- custom js -->
+<script src="{{ url_for('static',filename = 'js/custom.js')  }}"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+<!-- End Google Map -->
+ 
+</body>
+</html>
