@@ -52,6 +52,12 @@ def naivebayes():
 
 def internship():
     return render_template('internship.html')
+  
+@app.route('/code')
+
+def QR():
+    return render_template('QR.html')
+
 
 @app.route('/predict',methods=['GET'])
 def predict():
